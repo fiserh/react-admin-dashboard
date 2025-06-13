@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  react-admin:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - PORT=5000
+      - HOST=0.0.0.0
+      - CHOKIDAR_USEPOLLING=true
